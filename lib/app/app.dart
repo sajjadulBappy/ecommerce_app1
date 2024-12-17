@@ -1,8 +1,8 @@
 import 'package:ecommerce_app1/app/app_theme.dart';
+import 'package:ecommerce_app1/features/auth/ui/screens/complete_profile_screen.dart';
 import 'package:ecommerce_app1/features/auth/ui/screens/email_vefification_screen.dart';
 import 'package:ecommerce_app1/features/auth/ui/screens/opt_verification_screen.dart';
 import 'package:ecommerce_app1/features/auth/ui/screens/splash_screen.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class CraftyBay extends StatelessWidget {
@@ -11,7 +11,7 @@ class CraftyBay extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      initialRoute: EmailVerificationScreen.name,
+      initialRoute: CompleteProfileScreen.name,
       theme: AppThemeData.lightThemeData,
       darkTheme: AppThemeData.darkThemeData,
       themeMode: ThemeMode.light,
@@ -19,6 +19,7 @@ class CraftyBay extends StatelessWidget {
         '/' : (context) => const SplashScreen(),
         EmailVerificationScreen.name : (contest) => const EmailVerificationScreen(),
         OptVerificationScreen.name : (context) => const OptVerificationScreen(),
+        CompleteProfileScreen.name : (context) => const CompleteProfileScreen(),
       },
     );
   }
